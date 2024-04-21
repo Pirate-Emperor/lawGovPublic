@@ -150,7 +150,7 @@ To achieve the best results, we tried different experiments in **lawGov**:
 
 Each experiment can be made or not, so we ended up with 8 (2 to the power of 3) possible combinations. 
 
-![flowchart](https://github.com/Pirate-Emperor/lawGovPublic/visual/flowchart.jpg)
+![flowchart](https://github.com/Pirate-Emperor/lawGovPublic/blob/main/visual/flowchart.png)
 
 ## Training
 
