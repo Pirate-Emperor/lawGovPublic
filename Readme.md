@@ -156,6 +156,147 @@ Each experiment can be made or not, so we ended up with 8 (2 to the power of 3) 
 
 For training, the dataset was divided into training and testing sets with a proportion of 80:20, and this division was constant for all of lawGov's models to ensure comparability. The training data was divided into 4 parts (folds) using 4-fold cross-validation. Testing accuracies were obtained for each fold, resulting in 4 testing accuracies per combination. 
 
+### Saving Best Combination (CNN)
+
+- **Identifying Similar Combinations:**
+  - Combination 2: No preprocessing, no anonymization, balanced dataset.
+  - Combination 5: Preprocessing, no anonymization, imbalanced dataset.
+
+- **Results of Each Combination:**
+  - Combination 2:
+    - 4 results based on different folds.
+    - Varying testing accuracies and losses.
+  - Combination 5:
+    - 4 results based on different folds.
+    - Varying testing accuracies and losses.
+
+- **Best Model Selection:**
+  - The best model is selected based on its performance in generalizing well on testing data.
+  - **Best Model**: Second model of the second combination.
+    - **Combination 2, Model 2**.
+  
+- **Performance Metrics of the Best Model**:
+  - **Testing Accuracy**: 0.933
+  - **Testing Loss**: 0.325
+
+- **Reasoning for Selection**:
+  - This model demonstrates the highest testing accuracy and a reasonably low testing loss.
+  - The model's performance is evaluated on both balance and imbalance datasets, ensuring robustness.
+  - Its performance consistency across different folds indicates good generalization capability.
+
+- **Summary of Best Model**:
+  - **Combination**: No preprocessing, no anonymization, balanced dataset.
+  - **Model**: Second model.
+  - **Testing Accuracy**: 0.933
+  - **Testing Loss**: 0.325
+
+- **Usage of the Best Model**:
+  - To utilize the best performing model for further analysis or deployment, refer to the saved model weights or configurations corresponding to the selected combination and model.
+
+### Saving Best Combination (Doc2Vec)
+
+- **Identifying Similar Combinations:**
+  - Combination 1: No preprocessing, no anonymization, imbalanced dataset.
+  - Combination 5: Preprocessing, no anonymization, imbalanced dataset.
+
+- **Results of Each Combination:**
+  - Combination 1:
+    - 4 results based on different folds.
+    - Varying testing accuracies and losses.
+  - Combination 5:
+    - 4 results based on different folds.
+    - Varying testing accuracies and losses.
+
+- **Best Model Selection:**
+  - The best model is selected based on its performance in generalizing well on testing data.
+  - **Best Model**: Second model of the fifth combination.
+  
+- **Performance Metrics of the Best Model**:
+  - **Testing Accuracy**: 0.945
+  - **Testing Loss**: 0.282
+
+- **Reasoning for Selection**:
+  - This model demonstrates the highest testing accuracy and a reasonably low testing loss.
+  - The model's performance is evaluated on imbalanced datasets, a common scenario in real-world applications.
+  - Its performance consistency across different folds indicates good generalization capability.
+
+- **Summary of Best Model**:
+  - **Combination**: Preprocessing, no anonymization, imbalanced dataset.
+  - **Model**: Second model.
+  - **Testing Accuracy**: 0.945
+  - **Testing Loss**: 0.282
+
+- **Usage of the Best Model**:
+  - To utilize the best performing model for further analysis or deployment, refer to the saved model weights or configurations corresponding to the selected combination and model.
+
+### Saving Best Combination (GloVe)
+
+- **Identifying the Best Combination:**
+  - The best combination is Combination 2: No preprocessing, no anonymization, balanced dataset.
+
+- **Results of the Best Combination:**
+  - Combination 2:
+    - 4 results depending on different folds.
+    - Varying testing accuracies and losses.
+
+- **Best Model Selection:**
+  - The best model is selected based on its performance in generalizing well on testing data.
+  - **Best Model**: First model of the second combination.
+  
+- **Performance Metrics of the Best Model**:
+  - **Testing Accuracy**: 0.916
+  - **Testing Loss**: 0.384
+
+- **Reasoning for Selection**:
+  - This model demonstrates the highest testing accuracy and a reasonable testing loss among all combinations.
+  - The model's performance is evaluated on a balanced dataset, ensuring its robustness.
+  - Its performance consistency across different folds indicates good generalization capability.
+
+- **Summary of Best Model**:
+  - **Combination**: No preprocessing, no anonymization, balanced dataset.
+  - **Model**: First model.
+  - **Testing Accuracy**: 0.916
+  - **Testing Loss**: 0.384
+
+- **Usage of the Best Model**:
+  - To utilize the best performing model for further analysis or deployment, refer to the saved model weights or configurations corresponding to the selected combination and model.
+
+### Saving Best Combination (Tf-Idf)
+
+- **Identifying Similar Combinations:**
+  - Combination 3: No preprocessing, anonymization, imbalanced dataset.
+  - Combination 4: No preprocessing, anonymization, balanced dataset.
+
+- **Results of Each Combination:**
+  - Combination 3:
+    - 4 results based on different folds.
+    - Varying testing accuracies and losses.
+  - Combination 4:
+    - 4 results based on different folds.
+    - Varying testing accuracies and losses.
+
+- **Best Model Selection:**
+  - The best model is selected based on its performance in generalizing well on testing data.
+  - **Best Model**: Fourth model of the third combination.
+  
+- **Performance Metrics of the Best Model**:
+  - **Testing Accuracy**: 0.972
+  - **Testing Loss**: 0.141
+
+- **Reasoning for Selection**:
+  - This model demonstrates the highest testing accuracy and a very low testing loss.
+  - The model's performance is evaluated on both imbalanced and balanced datasets, ensuring robustness.
+  - Its performance consistency across different folds indicates excellent generalization capability.
+
+- **Summary of Best Model**:
+  - **Combination**: No preprocessing, anonymization, imbalanced dataset.
+  - **Model**: Fourth model.
+  - **Testing Accuracy**: 0.972
+  - **Testing Loss**: 0.141
+
+- **Usage of the Best Model**:
+  - To utilize the best performing model for further analysis or deployment, refer to the saved model weights or configurations corresponding to the selected combination and model.
+
 ## Final Steps
 
 After training the models, an ensemble learning approach was employed to combine the predictions of each model, using **voting** to determine the final prediction for each case. For a more detailed explanation of **lawGov** and to see the results of its models in much more detail, please refer to each model's notebook. 
