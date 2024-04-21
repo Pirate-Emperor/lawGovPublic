@@ -1,0 +1,9 @@
+.venv/
+.vscode/
+cpp_bind/
+data/
+dataset/
+embeddings/
+models/
+
+Instructions.md
