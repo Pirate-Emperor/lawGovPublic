@@ -20,6 +20,7 @@
 - [UN Goals](#un-goals-and-targets-aligned-with-the-project)
 - [Installation](#installation)
 - [Machine Learning Strategy and Results: Ensemble vs. Unified Model](#machine-learning-strategy-and-results-ensemble-vs-unified-model)
+- [Dataset](#dataset)
 - [Models](#models)
   - [Doc2Vec](#doc2vec)
   - [1D-CNN](#1d-cnn)
@@ -31,7 +32,6 @@
 - [Experiments](#experiments)
 - [Training](#training)
 - [Final Steps](#final-steps)
-- [Additional](#additional)
 - [Challenges](#challenges)
 - [Reference](#reference)
 
@@ -93,6 +93,21 @@ I expected the ensemble method to improve on the initial strategy since the indi
 ### Note on Data Leakage
 I had to be very careful to use the same test-train splits within each justice's model that I used for the case-centered approach. That is, if a case was used for training in the case-centered approach, it had to be used only for training in each of the 9 or so justice-centered models where it was relevant. Otherwise, if even one justice's model used the case for testing rather than training, the ensemble method would unfairly have "better" information about the test set than the case-centered strategy. As a result, the test-train splits for each justice deviated randomly from the 70/30% split imposed on the case-centered data. Another disadvantage of this necessary precaution was that it disallowed automatic k-folds cross-validation as I needed to keep the same test-train split across all models.
 
+## Dataset
+
+The Dataset consists of **22198** legal cases. The key features of the dataset are the `first_party`, `second_party`, `winner_index`, and `facts`.
+
+| column | datatype | description |
+| ---    | ---      | ---         |
+| ID     | int64    | Defines the case ID |
+| name     | string    | Defines the case name |
+| href     | string    | Defines the case hyper-reference |
+| first_party     | string    | Defines the name of the first party (petitioner) of a case |
+| second_party     | string    | Defines the name of the second party (respondent) of a case |
+| winning_party     | string    | Defines the winning party name of a case |
+| winner_index     | int64    | Defines the winning index of a case, 0 => the first party wins, 1 => the second party wins |
+| facts     | string    | Contains the case facts that are needed to determine who is the winner of a specific case |
+
 ## Models
 
 lawGov was trained using 7 different models:
@@ -141,16 +156,14 @@ For training, the dataset was divided into training and testing sets with a prop
 
 ## Final Steps
 
-After training the models, an ensemble learning approach was employed to combine the predictions of each model, using **voting** to determine the final prediction for each case.
-
-## Additional
-
-For a more detailed explanation of **lawGov** and to see the results of its models in much more detail, please refer to each model's notebook. Thank you.
+After training the models, an ensemble learning approach was employed to combine the predictions of each model, using **voting** to determine the final prediction for each case. For a more detailed explanation of **lawGov** and to see the results of its models in much more detail, please refer to each model's notebook. 
 
 ## Challenges:
+
 One of the main challenges in legal judgment prediction using NLP is the complexity and variability of legal language. Legal documents often use technical terminology, jargon, and complex sentence structures that can be difficult for NLP models to analyze accurately. Additionally, legal cases can be influenced by various factors, including the specific circumstances of the case, the legal jurisdiction, and the judge's personal beliefs and biases.
 
 ## Reference:
+
 - ML Conflict: https://www.sciencedirect.com/science/article/abs/pii/016792369390034Z
 - Conflict Resolution Strategies In Artificial Intelligence. https://conflictresolved.com/conflict-resolution-strategies-in-artificial-intelligence/.
 - Artificial Intelligence Techniques for Conflict Resolution. https://link.springer.com/article/10.1007/s10726-021-09738-x.
