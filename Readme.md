@@ -150,6 +150,8 @@ To achieve the best results, we tried different experiments in **lawGov**:
 
 Each experiment can be made or not, so we ended up with 8 (2 to the power of 3) possible combinations. 
 
+![flowchart](https://github.com/Pirate-Emperor/lawGovPublic/visual/flowchart.jpg)
+
 ## Training
 
 For training, the dataset was divided into training and testing sets with a proportion of 80:20, and this division was constant for all of lawGov's models to ensure comparability. The training data was divided into 4 parts (folds) using 4-fold cross-validation. Testing accuracies were obtained for each fold, resulting in 4 testing accuracies per combination. 
