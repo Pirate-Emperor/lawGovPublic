@@ -15,6 +15,7 @@
 
 ## Demo Video
 ![](visual/ful1final.mp4)
+
 ## Table of Contents:
 - [Introduction](#introduction)
 - [Research Question](#research-question)
