@@ -13,6 +13,8 @@
 [![Skype](https://img.shields.io/badge/Skype-Contact-important?logo=skype)](https://join.skype.com/invite/yfjOJG3wv9Ki)
 [![Medium](https://img.shields.io/badge/Medium-Announcement%20%2B%20Post-brightgreen?logo=medium)](https://medium.com/@piratekingrahul)
 
+## Demo Video
+![](visual/ful1final.mp4)
 ## Table of Contents:
 - [Introduction](#introduction)
 - [Research Question](#research-question)
