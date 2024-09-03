@@ -1,5 +1,7 @@
 # [lawGov: Judicial Component of GovUnityXplorer](https://github.com/Pirate-Emperor/lawGovPublic)
 
+![](header.png)
+
 ## --- Note: This is a public repository of the lawGov Model ---
 
 ## Social Links
