@@ -14,7 +14,7 @@
 [![Medium](https://img.shields.io/badge/Medium-Announcement%20%2B%20Post-brightgreen?logo=medium)](https://medium.com/@piratekingrahul)
 
 ## Demo Video
-[![Watch the video](https://www.youtube.com/watch?v=0Z4lfSUuBq4/maxresdefault.jpg)](https://www.youtube.com/watch?v=0Z4lfSUuBq4)
+[![Watch the video](https://img.youtube.com/watch?v=0Z4lfSUuBq4/maxresdefault.jpg)](https://www.youtube.com/watch?v=0Z4lfSUuBq4)
 
 
 ## Table of Contents:
